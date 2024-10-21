@@ -532,7 +532,7 @@ ul {
     font-weight: 900;
 }
 
-.h1-title span {
+.h1-title b {
     color: #ff8243;
     background-image: linear-gradient(0deg, rgb(13 13 37 /8%), rgb(13 13 37 /8%));
     background-size: 100% 15px;
