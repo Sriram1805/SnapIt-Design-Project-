@@ -534,7 +534,7 @@ ul {
 
 .h1-title b {
     color: #ff8243;
-    background-image: linear-gradient(0deg, rgb(13 13 37 /8%), rgb(13 13 37 /8%));
+    /*background-image: linear-gradient(0deg, rgb(13 13 37 /8%), rgb(13 13 37 /8%));*/
     background-size: 100% 15px;
     background-position: 0 90%;
     background-repeat: no-repeat;
@@ -823,6 +823,17 @@ p {
 
 .dish-title p {
     color: #bfbfbf;
+}
+
+.dish-title ul {
+    list-style: circle;
+    width: 200px;
+    margin-left: 100px;
+}
+
+.dish-title li {
+    color: #bfbfbf;
+    text-align: left;
 }
 
 .dish-info ul, .dist-bottom-row ul {
