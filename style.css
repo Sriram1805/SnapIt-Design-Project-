@@ -534,12 +534,12 @@ ul {
 
 .h1-title b {
     color: #ff8243;
-    /*background-image: linear-gradient(0deg, rgb(13 13 37 /8%), rgb(13 13 37 /8%));
+    /*background-image: linear-gradient(0deg, rgb(13 13 37 /8%), rgb(13 13 37 /8%));*/
     background-size: 100% 15px;
     background-position: 0 90%;
     background-repeat: no-repeat;
     display: inline;
-    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);*/
+    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -828,12 +828,16 @@ p {
 .dish-title ul {
     list-style: circle;
     width: 200px;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .dish-title li {
     color: #bfbfbf;
     text-align: left;
+}
+
+.dish-title b {
+    color: #484747;
 }
 
 .dish-info ul, .dist-bottom-row ul {
