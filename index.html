@@ -50,13 +50,15 @@
                                     <i class="uil uil-search"></i>
                                 </button>
                             </form>
-                            <a href="javascript:void(0)" class="header-btn header-cart">
+                            <button class="header-btn header-cart" id="cart-open">
                                 <i class="uil uil-shopping-bag"></i>
-                                <!--span class="cart-number">1</span-->
-                            </a>
-                            <a href="javascript:void(0)" class="header-btn">
+                                <span class="cart-number">1</span>
+                            </button>
+                        </div>
+                        <div>
+                            <button class="header-btn button" id="form-open">
                                 <i class="uil uil-user-md"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -64,7 +66,89 @@
         </div>
     </header>
     <!-- header ends  -->
-
+     <!-- Login-->
+      <section class="login">
+        <div class="form_container">
+            <i class="uil uil-times form_close"></i>
+            <!--LOGIN FORM-->
+            <div class="form login_form">
+                <form action="active">
+                    <h2>Login</h2>
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your Email" />
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Enter your Password" />
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="option_field">
+                        <span class="checkbox">
+                            <input type="checkbox" id="check">
+                            <label for="check">Remember me</label>
+                        </span>
+                        <a href="#" class="forget_pw">Forget Password?</a>
+                    </div>
+                    <button class="button">Login Now</button>
+                    <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+                </form>
+            </div>
+            <!--SIGNUP FORM-->
+            <div class="form signup_form">
+                <form action="active">
+                    <h2>Signup</h2>
+                    <div class="input_box">
+                        <input type="email" placeholder="Enter your Email" />
+                        <i class="uil uil-envelope-alt email"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Create Password" />
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" placeholder="Confirm Password" />
+                        <i class="uil uil-lock password"></i>
+                        <i class="uil uil-eye-slash pw_hide"></i>
+                    </div>
+                    <button class="button">Sign Up</button>
+                    <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+                </form>
+            </div>
+        </div>
+      </section>
+      <!-- Login end-->
+       <!---cart>
+       <section class="cart" id="cart">
+        <div class="cart_container">
+            <button id="cart-close" class="close_cart">X</button>
+            <h2>Your Cart</h2>
+            <div class="cart_items">
+                <div class="cart_item">
+                    <img src="path/to/food-image.jpg" alt="Food Item">
+                    <div class="item_details">
+                        <h4>Food Item Name</h4>
+                        <p>$10.00</p>
+                        <div class="quantity_controls">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                    <button class="remove_item">Remove</button>
+                </div>
+            </div>
+            <div class="cart_summary">
+                <h3>Order Summary</h3>
+                <p>Subtotal: <span>$30.00</span></p>
+                <p>Delivery: <span>$5.00</span></p>
+                <p>Total: <span>$35.00</span></p>
+                <button class="checkout_button">Proceed to Checkout</button>
+            </div>
+        </div>
+    </section>    
+       <cart end-->
     <div id="viewport">
         <div id="js-scroll-content">
             <section class="main-banner" id="home">
@@ -1615,6 +1699,7 @@
     <script src="assets/js/smooth-scroll.js"></script>
     <!-- custom js  -->
     <script src="main.js"></script>
+    <script src="login.js"></script>
 
 </body>
 
