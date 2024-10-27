@@ -291,137 +291,89 @@ button{
     margin-top: 15px;
 }
 /*login end*/
-/*cart
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
+/*cart*/
 .cart {
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
-    background-color: #f9f9f9;
+    position: fixed; /* Use fixed positioning for centering */
+    top: 50%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center the cart */
+    display: none; /* Start hidden */
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px; /* Add some padding */
+    width: 55%;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    margin: 20px; /* Margin to separate from other elements */
+    flex-direction: column; /* Arrange items vertically */
+    z-index: 1000; /* Ensure the cart is above other elements */
 }
 
-.cart_container {
-    width: 90%;
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.btn-close {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: #ff8243; /* Update button color */
+    font-size: 24px; /* Larger font size */
+    position: absolute; /* Positioning */
+    top: 5px; /* Distance from top */
+    right: 10px; /* Distance from right */
+    cursor: pointer; /* Pointer cursor */
 }
 
-.cart_container h2 {
-    color: #ff8243;
+.btn-close:hover {
+    color: #fff; /* Update hover color if needed */
+}
+
+/* Other existing CSS styles */
+.cart h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.cart_items {
-    border-bottom: 1px solid #ececec;
-    padding-bottom: 20px;
-}
-
-.cart_item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-top: 1px solid #ececec;
-}
-
-.cart_item img {
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
-}
-
-.item_details {
-    flex: 1;
-    padding: 0 15px;
-}
-
-.item_details h4 {
-    font-size: 16px;
-    color: #333;
-}
-
-.item_details p {
-    font-size: 14px;
-    color: #ff8243;
-    margin-top: 5px;
-}
-
-.quantity_controls {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.quantity_controls button {
-    width: 25px;
-    height: 25px;
-    background: #ff8243;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.quantity_controls input {
-    width: 40px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 0 5px;
-}
-
-.remove_item {
-    color: #ff8243;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.cart_summary {
+.cart-summary {
     margin-top: 20px;
+    text-align: right;
 }
 
-.cart_summary h3 {
-    color: #ff8243;
-    margin-bottom: 10px;
+.cart-item {
+    border-bottom: 1px solid #ddd; /* Light border for separation */
+    padding: 10px 0; /* Padding for cart items */
 }
 
-.cart_summary p {
+.cart-item:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+.center-item {
     display: flex;
-    justify-content: space-between;
-    font-size: 14px;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
-.cart_summary p span {
-    color: #333;
+.number-spinner {
+    display: flex;
+    align-items: center;
 }
 
-.checkout_button {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff8243;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+.btn {
+    margin: 0 5px; /* Space between buttons */
+    background-color: #ff8243; /* Button color */
+    color: white; /* Text color for buttons */
+    border: none; /* No border */
+    padding: 10px 15px; /* Add padding for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor */
 }
 
-.checkout_button:hover {
-    background-color: #e66f30;
+.btn:hover {
+    background-color: #ff8243; /* Darker shade on hover for buttons */
 }
 
-cart end*/
+input.form-control {
+    width: 50px; /* Fixed width for quantity input */
+    text-align: center; /* Center text in input */
+}
+/*cart end*/
+
 .cart-number {
     position: absolute;
     top: -10px;
@@ -679,6 +631,8 @@ cart end*/
         height: auto !important;
     }
 }
+
+
 
 @media (max-width: 575px) {
     .container, .container-fluid {
