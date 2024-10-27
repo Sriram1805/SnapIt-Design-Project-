@@ -52,7 +52,7 @@
                             </form>
                             <button class="header-btn header-cart" id="cart-open">
                                 <i class="uil uil-shopping-bag"></i>
-                                <span class="cart-number">1</span>
+                                <span class="cart-number">0</span>
                             </button>
                         </div>
                         <div>
@@ -66,13 +66,31 @@
         </div>
     </header>
     <!-- header ends  -->
+     <!--cart-->
+     <!--Cart Page Structure -->
+    <div class="cart">
+        <div class="container">
+            <button class="btn btn-close" id="cart-close">✖</button>
+            <h2>Your <b>Cart</b></h2>
+            <div class="col-md-12">
+                <!-- Cart items will be injected here by JavaScript -->
+            </div>
+            <div class="cart-summary">
+                <h4>Subtotal: Rs. <span id="sub-total">0.00</span></h4>
+                <h4>Tax (10%): Rs. <span id="tax-amount">0.00</span></h4>
+                <h3>Total: Rs. <span id="total-price">0.00</span></h3>
+            </div>
+            <button class="btn btn-custom" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+    <!--cart end-->
      <!-- Login-->
       <section class="login">
         <div class="form_container">
             <i class="uil uil-times form_close"></i>
             <!--LOGIN FORM-->
             <div class="form login_form">
-                <form action="active">
+                <form action="#">
                     <h2>Login</h2>
                     <div class="input_box">
                         <input type="email" placeholder="Enter your Email" />
@@ -96,7 +114,7 @@
             </div>
             <!--SIGNUP FORM-->
             <div class="form signup_form">
-                <form action="active">
+                <form action="#">
                     <h2>Signup</h2>
                     <div class="input_box">
                         <input type="email" placeholder="Enter your Email" />
@@ -337,7 +355,7 @@
                                                     <b>Rs. 499</b>
                                                 </li>
                                                 <li>
-                                                    <button class="dish-add-btn">
+                                                    <button class="dish-add-btn" data-item-id="1">
                                                         <i class="uil uil-plus"></i>
                                                     </button>
                                                 </li>
@@ -382,7 +400,7 @@
                                                     <b>Rs. 359</b>
                                                 </li>
                                                 <li>
-                                                    <button class="dish-add-btn">
+                                                    <button class="dish-add-btn" data-item-id="2">
                                                         <i class="uil uil-plus"></i>
                                                     </button>
                                                 </li>
@@ -426,7 +444,7 @@
                                                     <b>Rs. 149</b>
                                                 </li>
                                                 <li>
-                                                    <button class="dish-add-btn">
+                                                    <button class="dish-add-btn" data-item-id="3">
                                                         <i class="uil uil-plus"></i>
                                                     </button>
                                                 </li>
@@ -471,7 +489,7 @@
                                                     <b>Rs. 379</b>
                                                 </li>
                                                 <li>
-                                                    <button class="dish-add-btn">
+                                                    <button class="dish-add-btn" data-item-id="4">
                                                         <i class="uil uil-plus"></i>
                                                     </button>
                                                 </li>
@@ -516,7 +534,7 @@
                                                     <b>Rs. 99</b>
                                                 </li>
                                                 <li>
-                                                    <button class="dish-add-btn">
+                                                    <button class="dish-add-btn" data-item-id="5">
                                                         <i class="uil uil-plus"></i>
                                                     </button>
                                                 </li>
@@ -560,274 +578,7 @@
                                                     <b>Rs. 159</b>
                                                 </li>
                                                 <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--7-->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp Veg" data-cat="Veg">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/1.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            5
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Fresh Chicken Veggies</h3>
-                                            <!--p>120 calories</p-->
-                                            <ul>
-                                                <li><b>Protein:</b> Builds and repairs muscles.</li>
-                                                <li><b>Vitamins:</b> Rich in B vitamins, vitamin A, C, K, and folate.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Non Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 499</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 8-->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp Veg" data-cat="veg">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/2.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            4.3
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Grilled Chicken</h3>
-                                            <!--p>80 calories</p-->
-                                            <ul>
-                                                <li><b>Protein:</b> Helps in muscle building and repair.</li>
-                                                <li><b>Vitamins:</b> B vitamins and some vitamin A and folate.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Non Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>1</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 359</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 9 -->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp Nveg" data-cat="Nveg">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/3.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            4
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Panner Noodles</h3>
-                                            <!--p>100 calories</p-->
-                                            <ul>
-                                                <li><b>Protein:</b> Paneer (cottage cheese) is a good source of protein.</li>
-                                                <li><b>Vitamins:</b> B vitamins, some A, D, and calcium.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 149</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 10 -->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp Nveg" data-cat="Nveg">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/4.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            4.5
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Chicken Noodles</h3>
-                                            <!--p>120 calories</p-->
-                                            <ul>
-                                                <li><b>Protein:</b> Muscle building, fiber for digestion.</li>
-                                                <li><b>Vitamins:</b> B vitamins and some vitamin A and folate.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Non Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 379</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 11-->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp combo" data-cat="combo">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/5.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            5
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Bread Boiled Egg</h3>
-                                            <!--p>120 calories</p-->
-                                            <ul>
-                                                <li><b>Protein:</b> Moderate from both, especially eggs.</li>
-                                                <li><b>Vitamins:</b>  B vitamins (B2, B6, B12) and vitamin D from eggs.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Non Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 99</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 12-->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp combo" data-cat="combo">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/6.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            5
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Immunity Dish</h3>
-                                            <!--p>120 calories</p-->
-                                            <ul>
-                                                <li><b>Protein:</b> Supports immune cell production and repair.</li>
-                                                <li><b>Vitamins:</b>  Rich in B vitamins, vitamin C, A, and K for immune function..</li>
-                                            </ul>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 159</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
+                                                    <button class="dish-add-btn" data-item-id="6">
                                                         <i class="uil uil-plus"></i>
                                                     </button>
                                                 </li>
@@ -1699,6 +1450,7 @@
     <script src="assets/js/smooth-scroll.js"></script>
     <!-- custom js  -->
     <script src="main.js"></script>
+    <script src="assets/js/cart.js"></script>
     <script src="assets/js/login.js"></script>
 
 </body>
